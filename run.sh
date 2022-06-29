@@ -1,0 +1,3 @@
+export TOKEN=`curl -d '{"email":"Remi.Hickey@onenorthend.com","password":"foo"}' -H "Content-Type: application/json" -X POST a3fbae00975084b8fbd6f0e010494569-1326204215.us-east-2.elb.amazonaws.com/auth  | jq -r '.token'`
+curl --request GET 'a3fbae00975084b8fbd6f0e010494569-1326204215.us-east-2.elb.amazonaws.com/contents' -H "Authorization: Bearer ${TOKEN}" | jq 
+export URL=a3fbae00975084b8fbd6f0e010494569-1326204215.us-east-2.elb.amazonaws.com
